@@ -36,6 +36,7 @@
 	max-height: 1700px;
 	background: #000;
 	padding-top: 30px;
+	position: relative;
 }
 
 .worms_sample h2 {
@@ -53,11 +54,10 @@
 }
 
 .worms_sample_one__property {
-	width: 50%;
+	width: 50.1%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-/*	border-right: 2px #fff solid;*/
 }
 
 .worms_sample_one__property h3 {
@@ -81,6 +81,18 @@
 	background-color: #fff;
 }
 
+.line_vertical_left {
+	height: 100vh;
+	width: 2px;
+	background-color: #fff;
+}
+
+.line_vertical_right {
+	height: 100px;
+	width: 2px;
+	background-color: #fff;
+}
+
 .worms_sample_two {
 	display: flex;
 	justify-content: flex-end;
@@ -88,11 +100,10 @@
 }
 
 .worms_sample_two__property {
-	width: 50%;
+	width: 50.1%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-/*	border-left: 3px #fff solid;*/
 }
 
 .worms_sample_two__property h3 {
@@ -109,10 +120,16 @@
 	text-align: right;
 }
 
-/*.worms_sample_two__property div {
-	height: 100%;
-	border-left: 2px solid #fff;
-}*/
+.center-line {
+  	width: 3px;
+  	height: 90%;
+  	background-color: #fff;
+  	position: absolute;
+  	top: 100px;
+  	left: 50%;
+  	transform: translateX(-50%);
+}
+
 
 
 .links_to_articles {
