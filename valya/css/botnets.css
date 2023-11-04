@@ -173,10 +173,10 @@
 
 .center_line {
   	width: 3px;
-  	height: 90%;
+  	height: 85%;
   	background-color: #fff;
   	position: absolute;
-  	top: 100px;
+  	top: 150px;
   	left: 50%;
   	transform: translateX(-50%);
 }
