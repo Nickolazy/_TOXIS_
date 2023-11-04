@@ -1,0 +1,129 @@
+.main_page {
+	width: 100%;
+	height: 100vh;
+	background: #000;
+	position: relative;
+	z-index: -10;
+}
+
+.main_page_image {
+	width: 100%;
+	position: absolute;
+	top: -100;
+	left: 0;
+	z-index: -9;
+	opacity: 65%;
+}
+
+.container {
+	height: 100%;
+	width: 1150px;
+	margin: 0 auto;
+}
+
+.text_head {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: end;
+	background: 
+		linear-gradient(to bottom, transparent 80%, #000);
+}
+
+.text_head p {
+	font-family: "Special Elite";
+	display: inline-block;
+	color: #ffffff;
+	font-size: 40px;
+	text-align: end;
+	margin: 0 0 40px 40px;
+}
+
+
+
+.viruses_sample {
+	width: 100%;
+	max-height: 1700px;
+	background: #000;
+	padding-top: 100px;
+	position: relative;
+}
+
+.viruses_sample h2 {
+	margin-bottom: 30px;
+	font-family: "Special Elite";
+	color: #ffffff;
+	font-size: 40px;
+	text-align: center;
+}
+
+.viruses_sample_one {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.viruses_sample_one__property {
+	width: 50.1%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.viruses_sample_one__property h3 {
+	font-family: "Special Elite";
+	color: #ffffff;
+	font-size: 40px;
+	text-align: left;
+}
+
+.viruses_sample_one__property p {
+	font-family: "Special Elite";
+	color: #ffffff;
+	font-size: 20px;
+	text-align: left;
+}
+
+.line {
+	height: 2px;
+	width: 100%;
+	max-width: 280px;
+	background-color: #fff;
+}
+
+.viruses_sample_two {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.viruses_sample_two__property {
+	width: 50.1%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.viruses_sample_two__property h3 {
+	font-family: "Special Elite";
+	color: #ffffff;
+	font-size: 40px;
+	text-align: right;
+}
+
+.viruses_sample_two__property p {
+	font-family: "Special Elite";
+	color: #ffffff;
+	font-size: 20px;
+	text-align: right;
+}
+
+.center_line {
+  	width: 3px;
+  	height: 85%;
+  	background-color: #fff;
+  	position: absolute;
+  	top: 150px;
+  	left: 50%;
+  	transform: translateX(-50%);
+}
