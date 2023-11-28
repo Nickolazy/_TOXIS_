@@ -1,0 +1,90 @@
+void setColor(int color) {
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
+}
+
+void drawMenu(int selectedItem, const char* MenuItems[], int itemCount) {
+    system("cls");
+    for (int i = 0; i < itemCount; ++i) {
+        if (i == selectedItem) {
+            setColor(FOREGROUND_GREEN | FOREGROUND_INTENSITY); // Set color for selected item
+            printf(">>> %s\n", MenuItems[i]);
+            setColor(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE); // Reset color
+        } else {
+            printf("    %s\n", MenuItems[i]);
+        }
+    }
+}
+
+int menuConstruction(const char* MenuItems[], int itemCount) {
+    int selectedItem = 0;
+    int choice;
+
+	do {
+		drawMenu(selectedItem, MenuItems, itemCount);
+		choice = getch();
+
+		switch (choice) {
+			case 224: // Special keys
+				choice = getch(); // Get the actual key code
+				switch (choice) {
+					case 72: // Up arrow
+						selectedItem = (selectedItem - 1 + itemCount) % itemCount;
+	                    break;
+	                case 80: // Down arrow
+	                    selectedItem = (selectedItem + 1) % itemCount;
+	                    break;
+				}
+				break;
+		}
+	} while (choice != 13); // Enter key
+
+	return selectedItem;
+}
+
+
+...
+
+
+int main() {
+	system("cls");
+	system("chcp 65001 > nul");
+
+	const char* mainMenuItems[] = {
+		"Функции добавления элементов",
+		"Функции удаления элементов",
+		"Функции корректировки записей",
+		"Функции сортировки списка",
+		"Функции просмотра списка",
+		"Функции записи данных в файл\n",
+		"Освобождение памяти списка и выход из программы"
+	};
+
+	const char* addMenuItems[] = {
+		"Добавление в начало списка",
+		"Добавление в конец списка",
+		"Вернуться назад ->"
+	};
+
+...
+
+
+system("cls");
+		system("chcp 65001 > nul");
+
+		selectedItem = menuConstruction(mainMenuItems, sizeof(mainMenuItems) / sizeof(mainMenuItems[0]));
+
+		if (selectedItem == 0) {
+			system("cls");
+			selectedItem = menuConstruction(addMenuItems, sizeof(addMenuItems) / sizeof(addMenuItems[0]));
+
+			switch (selectedItem) {
+				case 0:
+					addToBeginning(&head, inputData());
+					break;
+				case 1:
+					addToEnd(&head, inputData());
+					break;
+				case 2:
+					break;
+			}
+		}
